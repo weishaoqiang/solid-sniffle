@@ -1,0 +1,227 @@
+@import "../commons/config.less";
+@import "../commons/base.less";
+
+section {
+  padding-top: @padding-top;
+  background-color: @pure-white;
+  font-family: Helvetica,Tahoma,Arial,"Hiragino Sans GB","Microsoft YaHei",SimSun,Heiti,sans-serif;
+}
+
+section.main-body {
+  border-bottom: 1px solid #f3f3f3;
+
+  .content {
+    padding-top: 56px;
+
+    h3 {
+      font-size: @pc-lv1-fontSize;
+      text-align: left;
+      line-height: 1;
+      border-bottom: 1px dashed @gray-line;
+      padding: 0 10px 20px;
+      color: @pc-lv3-color;
+    }
+
+    .news-list {
+      display: none;
+      overflow: hidden;
+
+      .news-item {
+        padding-top: 30px;
+
+        &:last-child {
+          .news-detail {
+            border-bottom: 0 none;
+          }
+        }
+      }
+
+      .date {
+        float: left;
+        width: 80px;
+        height: 74px;
+        border-right: 3px solid #eee;
+
+        p {
+          height: 57px;
+
+          &:first-of-type {
+            line-height: 36px;
+            font-size: 40px;
+            color: #3c3c3c;
+            padding-left: 10px;
+          }
+
+          &:last-of-type {
+            padding-left: 18px;
+            line-height: 13px;
+            font-size: 15px;
+            color: #616161;
+          }
+        }
+      }
+
+      .news-detail {
+        margin-left: 120px;
+        word-wrap: break-word;
+        border-bottom: 1px dotted @gray-line;
+
+        .new-title {
+          padding: 0 0 10px;
+          // padding: 0;
+          font-size: @pc-lv2-fontSize+5;
+          font-weight: normal;
+        }
+
+        .new-time {
+          padding: 0 0 40px;
+          font-size: @m-lv3-fontSize;
+          color: @title-gray;
+
+          p {
+            float: left;
+            height: 17px;
+            line-height: 17px;
+            margin-right: 30px;
+          }
+        }
+
+        .new-content {
+          width: 885px;
+          padding: 0 0 20px;
+          line-height: 1.5;
+          overflow: hidden;
+
+          a {
+            font-size: @pc-lv3-fontSize;
+            color: @title-gray;
+          }
+        }
+
+        .new-pic {
+          img {
+            display: block;
+            width: 400px;
+            height: 160px;
+          }
+          padding-bottom: 20px;
+        }
+
+        .new-link {
+          line-height: 1;
+          padding-top: 26px;
+          font-size: @pc-lv3-fontSize;
+          padding: 0 0 80px;
+        }
+      }
+    }
+
+    .error-list {
+      width: 100%;
+      display: none;
+      text-align: center;
+      color: @fontColorgray;
+    }
+  }
+}
+/* 手机屏幕下 */
+@media screen and (max-width: 768px) {
+  section {
+    padding-top: 50px;
+    background-color: @pure-white;
+  }
+
+  section.main-body {
+    .content {
+      padding: 28px 20px 0;
+
+      h3 {
+        text-align: left;
+        line-height: 1;
+        padding-bottom: 10px;
+        padding-left: 0;
+        font-size: 1+@m-lv2-fontSize;
+        color: @pc-lv3-color;
+      }
+
+      .news-list {
+        display: block;
+        overflow: hidden;
+        padding-top: 0;
+
+        > .news-item {
+          padding-top: 22px;
+        }
+
+        .date {
+          float: none;
+          background-image: none;
+          height: 65px;
+          width: 100%;
+          padding-left: 0;
+
+          p {
+            float: left;
+            overflow: hidden;
+            padding: 0;
+            line-height: 1;
+            height: auto;
+            padding-right: 10px;
+          }
+
+          p:first-of-type {
+            font-size: 30px;
+          }
+        }
+
+        .news-detail {
+          margin: 0;
+          // padding-left: 0px;
+          overflow: hidden;
+          border-bottom: 1px dotted @gray-line;
+
+          .new-title {
+            padding-bottom: 10px;
+            padding-left: 0;
+            font-size: @m-lv2-fontSize+3;
+          }
+
+          .new-content {
+            width: 100%;
+            padding-bottom: 20px;
+            padding-left: 0;
+
+            a {
+              font-size: -1+@m-lv2-fontSize;
+            }
+          }
+
+          .new-pic {
+            img {
+              display: block;
+              width: 100%;
+              height: 120px;
+            }
+            padding-bottom: 16px;
+          }
+
+          .new-time {
+            padding-bottom: 30px;
+          }
+
+          .new-link {
+            padding-top: 15px;
+            font-size: @m-lv3-fontSize;
+            padding-bottom: 13px;
+          }
+        }
+      }
+
+      .error-list {
+        width: 100%;
+        display: none;
+        text-align: center;
+      }
+    }
+  }
+}

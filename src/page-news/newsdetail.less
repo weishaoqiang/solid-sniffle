@@ -1,0 +1,226 @@
+@import "../commons/config.less";
+@import "../commons/base.less";
+
+section {
+  padding-top: @padding-top;
+  font-family: Helvetica,Tahoma,Arial,"Hiragino Sans GB","Microsoft YaHei",SimSun,Heiti,sans-serif;
+  background-color: @pure-white;
+  border-bottom: 1px solid @gray-line;
+}
+
+.content.container {
+  width: 1190px;
+  margin: auto;
+  padding-top: 56px;
+
+  h3 {
+    font-size: @pc-lv1-fontSize;
+    text-align: left;
+    line-height: 1;
+    border-bottom: 1px dashed @gray-line;
+    padding: 0 10px 20px;
+    color: @pc-lv3-color;
+
+    a {
+      float: right;
+      margin-right: 170px;
+      font-size: 13px;
+      color: #888;
+      padding: 10px 0;
+    }
+  }
+
+  .news-item {
+    display: none;
+    padding-top: 30px;
+
+    .date {
+      float: left;
+      width: 80px;
+      height: 74px;
+      border-right: 3px solid #eee;
+
+      p {
+        height: 57px;
+        // padding-right: 62px;
+        &:first-of-type {
+          line-height: 36px;
+          font-size: 40px;
+          color: #3c3c3c;
+          padding-left: 10px;
+        }
+
+        &:last-of-type {
+          padding-left: 18px;
+          line-height: 13px;
+          font-size: 15px;
+          color: #616161;
+        }
+      }
+    }
+
+    .news-detail {
+      // padding-left: 80px;
+      margin-left: 120px;
+      overflow: hidden;
+
+      p {
+        word-wrap: break-word;
+        line-height: 1.8;
+        width: 885px;
+        text-indent: 0;
+        margin-bottom: 20px;
+
+        &p:last-of-type {
+          margin-bottom: 0;
+          // height: 0;
+        }
+      }
+
+      .new-title {
+        padding: 0;
+        font-size: @pc-lv2-fontSize+5;
+        font-weight: normal;
+      }
+
+      .date-count {
+        line-height: 1;
+        overflow: hidden;
+        padding: 10px 0 30px;
+        font-size: 13px;
+        color: #888;
+
+        > div {
+          float: left;
+          margin-left: 30px;
+
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+
+      .new-content {
+        font-size: 24px;
+        line-height: 44px;
+        color: #555;
+      }
+
+      .new-pic {
+        img {
+          display: block;
+          // width: 960px;
+          // height: 240px;
+        }
+        padding: 20px 0;
+      }
+    }
+  }
+}
+/* 手机屏幕下 */
+@media screen and (max-width: 768px) {
+  section {
+    padding-top: 50px;
+  }
+
+  .content.container {
+    width: 100%;
+    padding: 20px 20px 0;
+
+    h3 {
+      font-size: 1+@m-lv2-fontSize;
+      text-align: left;
+      line-height: 1;
+      border-bottom: 1px dashed @gray-line;
+      padding: 0 0 10px;
+      color: @pc-lv3-color;
+
+      a {
+        float: right;
+        margin-right: 0;
+        font-size: 13px;
+        color: #888;
+        padding: 0;
+      }
+    }
+
+    .news-item {
+      padding-top: 15px;
+
+      .date {
+        float: left;
+        width: 150px;
+        height: 115px;
+        text-align: right;
+        background-image: url('../commons/images/fengexian.svg');
+        background-repeat: no-repeat;
+        background-position: 140px center;
+
+        p {
+          height: 57px;
+          // padding-right: 62px;
+          padding-left: 0;
+
+          &:first-of-type {
+            line-height: 50px;
+            font-size: 40px;
+            color: #3c3c3c;
+          }
+
+          &:last-of-type {
+            line-height: 57px;
+            font-size: 15px;
+            color: #616161;
+          }
+        }
+      }
+
+      .news-detail {
+        margin: 0;
+        overflow: hidden;
+
+        .new-title {
+          padding: 0;
+          text-align: left;
+          font-size: @m-lv2-fontSize+3;
+        }
+
+        .date-count {
+          line-height: 1;
+          overflow: hidden;
+          padding: 10px 0 30px;
+          font-size: @m-lv3-fontSize;
+          color: #b8b8b8;
+
+          > div {
+            // width: 50%;
+            float: left;
+            margin: 0;
+            text-align: left;
+            padding-right: 8px;
+          }
+        }
+
+        .new-content {
+          width: 100%;
+          font-size: @m-lv2-fontSize;
+          line-height: 44px;
+          color: #555;
+        }
+
+        p {
+          width: 100%;
+          font-size: @m-lv2-fontSize;
+        }
+
+        .new-pic {
+          img {
+            display: block;
+            width: 100%;
+          }
+          padding-bottom: 16px;
+        }
+      }
+    }
+  }
+}

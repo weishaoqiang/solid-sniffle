@@ -1,0 +1,245 @@
+@import "../commons/config.less";
+@import "../commons/base.less";
+
+section {
+  padding-top: @padding-top;
+  margin-bottom: 100px;
+}
+/* banner部分 */
+.banner {
+  // width: 100%;
+  text-align: center;
+  background-image: url('../commons/images/bj.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  font-size: @pc-lv1-fontSize+17;
+  // padding-top: 164px;
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  .banner-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .banner-info-hide{
+    display: none;
+  }
+}
+
+.content {
+  box-shadow: 3px 3px 10px rgba(0,0,0,.06),-3px -3px 10px rgba(0,0,0,.06);
+  text-align: center;
+  padding: @padding-top 20px;
+  margin-top: -50px;
+  background-color: @pure-white;
+  border-radius: @cm-border-radius;
+  position: relative;
+  z-index: 2;
+
+  .title {
+    // height: 70px;
+    line-height: 1.2;
+    font-size: @pc-lv1-fontSize+1;
+    font-weight: 600;
+  }
+
+  .about {
+    .introduce {
+      margin: 38px 0;
+
+      p {
+        font-size: @pc-lv3-fontSize;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  .line {
+    width: 75%;
+    height: 0;
+    border-bottom: 1px dashed @gray-line;
+    margin: auto;
+  }
+
+  .company-list {
+    margin: @padding-top 0;
+
+    .company {
+      margin-top: @padding-top;
+      >.list {
+        padding: 0 145px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .item {
+        border: 1px solid #e6e6ee;
+        border-radius: 8px;
+        padding: 40px 5px 55px;
+        // margin: 36px 0 18px;
+        width: 18%;
+        &:first-of-type {
+          margin-top: 0;
+        }
+
+        .name {
+          position: relative;
+          font-size: @pc-lv2-fontSize;
+          line-height: 1.2;
+          padding-bottom: 20px;
+          // color: #000;
+          font-weight: 600;
+
+          &::before {
+            // content: '';
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #b8b8b8;
+            position: absolute;
+            left: 50%;
+            top: -1px;
+            margin-left: -80px;
+          }
+        }
+
+        .address {
+          font-size: @pc-lv3-fontSize;
+          line-height: 1.2;
+        }
+        // width: 100%;
+      }
+    }
+  }
+
+  .partners-list {
+    margin-top: @padding-top;
+    overflow: hidden;
+    margin-bottom: 0;
+
+    img {
+      width: 80%;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  section {
+    padding-top: -14+@padding-top;
+    margin-bottom: 0;
+  }
+
+  .banner {
+    font-size: @m-lv1-fontSize;
+    height: 175px;
+    width: 100%;
+    background-image: url("../commons/images/m-享存优势.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .banner-info {
+      p {
+        font-size: 3+@m-lv1-fontSize;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .content-box {
+    padding: 0 20px;
+  }
+
+  .content {
+    // box-shadow: none;
+    border-radius: 8px;
+    padding: 30px 20px 0;
+
+    .title {
+      // height: 70px;
+      font-weight: normal;
+      line-height: 1.5;
+      font-size: @m-lv1-fontSize;
+    }
+
+    .about {
+      .introduce {
+        margin: 10px 0 30px;
+
+        p {
+          font-size: @m-lv3-fontSize;
+          line-height: 1.8;
+        }
+      }
+    }
+
+    .company-list {
+      display: block;
+      margin: 30px 0 25px;
+
+      .company {
+        margin-top: 25px;
+        .list {
+          padding: 0;
+        }
+        .item {
+          margin: 18px 0 6px;
+          width: 100%;
+          border: 0 none;
+          padding: 0 0;
+
+          &:first-of-type {
+            margin-top: 0;
+          }
+
+          .name {
+            position: relative;
+            font-size: @m-lv2-fontSize;
+            line-height: 1;
+            padding-bottom: 20px;
+            font-weight: 400;
+
+            &::before {
+              content: '';
+              display: block;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              background-color: #b8b8b8;
+              position: absolute;
+              left: 52%;
+              top: 1px;
+              margin-left: -50px;
+            }
+          }
+
+          .address {
+            font-size: @m-lv3-fontSize;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+
+    .partners-list {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+/* 超大屏幕 */
+@media screen and (min-width: 1921px) {
+  .banner {
+    background-size: cover;
+  }
+}
