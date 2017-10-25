@@ -122,6 +122,40 @@ section.main-body {
       text-align: center;
       color: @fontColorgray;
     }
+
+    .pagination {
+      height: 40px;
+      margin: 10px 0;
+      text-align: center;
+      div {
+        box-sizing: border-box;
+        height: 100%;
+        line-height: 40px;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .prev, .next {
+        border: 1px solid @maincolor;
+        border-radius: 4px;
+        a {
+          display: block;
+          height: 100%;
+          padding: 0 10px;
+          line-height: 40px;
+          text-align: center;
+        }
+      }
+      .showpage {
+        padding: 0 10px;
+        border: 1px solid @maincolor;
+        border-radius: 4px;
+        >input {
+          width: 40px;
+          text-align: center;
+          border-bottom: 1px solid @fontColorgray;
+        }
+      }
+    }
   }
 }
 /* 手机屏幕下 */
